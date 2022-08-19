@@ -5,7 +5,7 @@ describe('perf', () => {
     const { aggregateStats: aggr } = await benchFPS(3, 4000, x => {
       window.dispatchEvent(
         new WheelEvent('wheel', {
-          deltaY: (Math.random() - 0.5) * Math.sin(x * Math.cos(x * 0.5) * 0.05) * 250,
+          deltaY: Math.sin(x * 0.3) * 120 ** 1.2,
         })
       )
     })
